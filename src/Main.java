@@ -1,12 +1,24 @@
-import java.lang.reflect.Array;
+/***********************************************************************************************************************
+
+ File        : Main.java
+
+ Date        : Wednesday 17th April
+
+ @author      : Chanel Morgan
+
+ Description : Main class for running and testing, but also methodds to print out the menu and play songs from the album
+
+ History     : 17/04/2024 - v1.00
+
+ Copyright   : (c) Chanel Morgan, April 2024.
+
+ **********************************************************************************************************************/
 import java.util.*;
 
 public class Main {
     private static ArrayList<Album> albums = new ArrayList<>();
 
     public static void main(String[] args) {
-
-
         // Creating album
         Album album = new Album("Album1", "AC/DC");
         // Adding songs
@@ -38,7 +50,12 @@ public class Main {
 
     }
 
-    // method that plays the playlist
+
+    /**
+     *Method to play the songs in the playlist
+     * @param  playList of the song
+     *
+     */
     private static void play(LinkedList<Song> playList){
        Scanner sc = new Scanner(System.in);
        boolean quit = false;
@@ -133,7 +150,9 @@ public class Main {
 
         }
     }
-
+    /**
+     * Method to print out a menu of options to the user
+     */
     private static void printMenu(){
         System.out.println("Available option\n press: ");
         System.out.println("0 - to quit\n" +
@@ -146,7 +165,9 @@ public class Main {
     }
 
 
-
+    /**
+     *Method to print out a list of songs
+     */
     public static void printList(LinkedList<Song> playlist){
         Iterator<Song> iterator = playlist.iterator();
         System.out.println("------------------------");
